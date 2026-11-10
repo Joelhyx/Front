@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@tanstack/devtools-vite": "0.8.5",
-    "@tanstack/eslint-config": "0.4.0",
+    "@tanstack/eslint-config": "^0.2.0",
     "@tanstack/router-cli": "^1.132.0",
     "@tanstack/router-plugin": "1.168.47",
     "@types/node": "^22.10.2",
