@@ -6,6 +6,24 @@ export const Route = createFileRoute('/')({
   component: Index,
 })
 
+function ComponenteH3() {
+  const [activo, setActivo] = useState(false)
+
+  return (
+    <div className="border p-4 rounded my-4">
+      <h3 className="text-xl font-bold mb-2">
+        Estado: {activo ? 'Encendido' : 'Apagado'}
+      </h3>
+      <button
+        onClick={() => setActivo(!activo)}
+        className="bg-blue-500 text-white p-2 rounded"
+      >
+        {activo ? 'OFF' : 'ON'}
+      </button>
+    </div>
+  )
+}
+
 function Index() {
   const { nombre, setNombre } = useContext(UserContext)
   const [texto, setTexto] = useState('')
@@ -39,6 +57,8 @@ function Index() {
           El nombre guardado en el contexto es: <b>{nombre}</b>
         </p>
       )}
+
+      <ComponenteH3 />
     </div>
   )
 }
